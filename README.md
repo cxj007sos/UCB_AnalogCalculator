@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/language-python-orange) ![](https://img.shields.io/badge/platform-win7--x64%7Cwin10--x64-lightgrey)
+![](https://img.shields.io/badge/language-python-orange) ![](https://img.shields.io/badge/platform-win10--x64%7Cwin11--x64-lightgrey)
 
 [![GitHub issues](https://img.shields.io/github/issues/cxj007sos/rpa_improve)](https://github.com/cxj007sos/rpa_improve/issues) [![GitHub license](https://img.shields.io/github/license/cxj007sos/rpa_improve)](https://github.com/cxj007sos/rpa_improve/blob/master/LICENSE)
 
