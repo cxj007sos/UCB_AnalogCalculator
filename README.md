@@ -46,27 +46,41 @@ windows可以直接下载exe文件夹中的可执行文件。
 **较大**的C值会增加探索，可能会更多地尝试不同的臂。
 **较小**的C值会减少探索，更倾向于利用当前认为最好的臂。
 
-- **C值为1**是UCB算法的一个经典设置，通常被称为"UCB1"算法。
-- 在Python的源码中【可以修改C值】，默认值为1。
-- 在exe可执行文件中【无法修改C值】，默认值为1。
+- **C值默认为** $\mathbf{\sqrt{2}}$ 是UCB算法的一个经典设置，通常被称为"UCB1"算法。
+- 在Python的源码中【可以修改C值】，默认值为$\mathbf{\sqrt{2}}$ 即 C = 1 * math.sqrt(2)
+- 在exe可执行文件中【无法修改C值】，默认值为$\mathbf{\sqrt{2}}$。
 
+在代码中你可以修改它，前面的数值就是标准差的倍数。
 ```python
-【这个位置不正确，需要修改代码后再确定，只是临时位置】
-def ucb_value(avg_reward, total_choices, count, C=1):
+C = 1 * math.sqrt(2)
 ```
 
 ### UCB公式
+
 $$
-UCB_i(t) = \overline{X}_i(t) + C \sqrt{\frac{2 \ln(t)}{N_i(t)}}
+UCB_i(t) = \overline{X}_i(t) + C *\sqrt{\frac{\ln t}{N_i(t)}}
 $$
+
+<div style="text-align: center;"> 可以简化为 </div>
+
+$$
+UCB = \overline{X}+ C *\sqrt{\frac{\ln t}{N}}
+$$
+
+**<div style="text-align: center;">UCB值 = 平均奖励 + 探索系数 * 根号下（总选择次数的自然对数 / 该臂被选择的次数）。</div>**
 
 其中：
 
-- $UCB_i(t)$ 是在时间 $t$ 时臂 $i$ 的【UCB值】
-- $\overline{X}_i(t)$ 是臂 $i$ 到时间 $t$ 为止的【平均奖励】
-- $C$ 是控制探索程度的参数（在标准UCB1算法中通常设为1）
-- $t$ 是总的选择次数
-- $N_i(t)$ 是到时间 $t$ 为止臂 $i$ 被选择的次数
+- $\overline{X}$   ：当前选项的  **平均奖励** 。
+- $C$  ：控制探索程度的参数，可以根据具体情况进行调整。（在标准UCB1算法中通常设为：$\mathbf{\sqrt{2}}$）
+- $t$  &nbsp;&nbsp;：当前的  **总选择次数** （轮次）,
+- $N$ ：当前选项（臂）被选择的 **次数**
+
+PS:
+
+- $(t)$ 仅表示当前轮次，**$(t)$ 不参与计算。**
+- $i$ 仅表示当前被选中的选项（臂），**$i$ 不参与运算。**
+- 所以简化公式去除了以上两项。
 
 ## 使用方法
 
