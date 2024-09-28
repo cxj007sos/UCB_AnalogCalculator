@@ -77,10 +77,16 @@ print("更新后的平均值: " + ", ".join(f"{arm}: {arms[arm]['value']:.2f}" f
 - 在Python的源码中【可以修改C值】，默认值为 $\mathbf{\sqrt{2}}$  即 C = 1 * math.sqrt(2)
 - 在exe可执行文件中【无法修改C值】，默认值为 $\mathbf{\sqrt{2}}$ 。
 
-在代码中你可以修改它，前面的数值就是标准差的倍数。
+在代码中你可以修改它
+
 ```python
 C = 1 * math.sqrt(2)
 ```
+**推荐几个常用的 C 值：**
+- C = 1 或 C = $\mathbf{\sqrt{2}}$（标准值）
+- C = 0.5（减少探索）
+- C = 2 或 3（增加探索）
+
 <br>
 
 ### UCB公式
