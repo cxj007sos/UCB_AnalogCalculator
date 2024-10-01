@@ -93,7 +93,7 @@ def run_ucb_simulation(arms):
     while True:
         try:
             rounds = int(input("请输入要运行的额外轮数（除去初始轮）: "))
-            if rounds >= 0:
+            if rounds > 0:
                 break
             else:
                 print("请输入一个非负整数。")
