@@ -1,7 +1,0 @@
-1、通过 "爬虫上海大乐透.py" 获得数据，如果爬虫失效要用其他爬虫，也需要按照 “dlt_lottery_data.xlsx” 的格式整理数据。
-2、运行 "重构数据.py“ 重构 “dlt_lottery_data.xlsx” 数据，重构建的数据在 “output_csv_files” 文件夹里。
-3、将 “号码1~7.csv“ 改成 “data.csv“ ，与 UCB算法 程序放在同目录下，然后再开始运算。
-
-
-dlt_lottery_data.xlsx 数据为上海大乐透 7001-24111，每年150期，一共2627条数据。
-

@@ -1,0 +1,9 @@
+1、通过 "爬虫大乐透+双色球.py" 获得数据，如果爬虫失效要用其他爬虫，也需要按照  "xxx_lottery_data.csv"的格式整理数据。
+
+2、运行 "重构数据.py" 重构  "ssq_lottery_data.csv" 和 "dlt_lottery_data" 数据，重构建的数据在  "output_csv_files"  文件夹里。
+
+3、将 "output_csv_files" 文件夹下对应的文件改成  "data.csv" ，与 UCB算法 程序放在同目录下，然后再开始运算。
+
+
+dlt_lottery_data.csv 数据为大乐透 7001-24111，每年150期，一共2627条数据。
+ssq_lottery_data.csv 数据为双色球 7001-24111，每年153~154期，一共2688条数据。
