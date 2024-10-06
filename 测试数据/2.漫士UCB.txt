@@ -11,7 +11,7 @@ A,A,C,C,C,C,C     第8轮还选C。。。但C没数据了。。。
 如果C提供更多的数据就可以知晓UCB1算法和扩展板的UCB算法的区别
 
 
-扩展板UCB算法：
+高级版UCB算法：
 标准差sigma=1
 B,A,C,C,C,C,C,A,B,A,A,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B
 
